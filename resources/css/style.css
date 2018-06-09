@@ -18,6 +18,7 @@ header{
   align-items: center;
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
+  text-transform: uppercase;
 }
 .logo img{
   height: 1.5rem;
@@ -40,6 +41,7 @@ header{
   background-color: black;
   font-size: 2rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .slogan h3{
   font-size: 1rem;
@@ -47,6 +49,9 @@ header{
 }
 nav{
   background-color: firebrick;
+}
+#mobile{
+  display: none;
 }
 .nav{
   display: flex;
@@ -65,25 +70,26 @@ nav{
   justify-content: space-between;
   padding-top: 3rem;
 }
-figure{
+.img{
   width: 30%;
   height: auto;
+  border: 4px solid black;
+}
+figure{
   display: flex;
   flex-direction: column;
-  border: 4px solid black;
+  align-items: center;
 }
 figure img{
   height: 9rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  flex-basis: auto;
-  flex-shrink: 5;
+  width: auto;
+  max-width: 100%;
 }
 figure figcaption{
+  width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: black;
-  color: white;
   text-align: center;
 }
 .contact{
@@ -112,4 +118,101 @@ footer{
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media only screen and (max-width: 1024px){
+  .container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .nav a{
+    text-decoration: none;
+    color: white;
+  }
+  .desktop-nav{
+    display: none;
+  }
+  #mobile-nav{
+    display: inline-block;
+    text-align: center;
+  }
+  .img{
+    width: 47%;
+  }
+  #glasses{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px){
+  .container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner{
+    height: 15rem;
+    background-image: url('./../images/moto.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slogan{
+    width: 100%;
+    position: relative;
+    top: 10rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    background-color: black;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .slogan h3{
+    font-size: 0.77rem;
+    margin-bottom: 0.25rem;
+  }
+  main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img{
+    width: 90%;
+  }
+  #watch, #glasses{
+    display: none;
+  }
+  .contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact article{
+    width: 90%;
+  }
+  .location{
+    margin-bottom: 0.5rem;
+  }
+  footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
